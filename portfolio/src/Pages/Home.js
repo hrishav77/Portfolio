@@ -2,8 +2,16 @@ import React, { useEffect, useState } from 'react';
 import '../index.css';
 import 'animate.css';
 import {Flex, Text } from '@chakra-ui/react';
+import About from './About';
+import Skills from './Skills';
+import AOS from 'aos';
+import Project from './Project';
 
 export default function Home() {
+  useEffect(()=>{
+    AOS.init({duration:1500})
+},[])
+
   const name = 'Hello My name is ';
   const [lettersToShow, setLettersToShow] = useState(0);
 
@@ -45,7 +53,9 @@ export default function Home() {
     I am passionate about web development and i like making websites 
   </Text>
 </Flex>
-
+<About/>
+<Skills/>
+<Project/>
         </>
   );
 }

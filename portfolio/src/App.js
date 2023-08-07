@@ -3,8 +3,7 @@ import './App.css';
 import Home from "./Pages/Home";
 import { ChakraProvider,extendTheme } from '@chakra-ui/react'
 import Navbar from "./Components/Navbar";
-import About from "./Pages/About";
-import Skills from "./Pages/Skills";
+
 function App() {
 
   const theme = extendTheme({
@@ -23,7 +22,7 @@ function App() {
     <Router>
         
         <Routes>
-          <Route path="/" element={<><Navbar/><Home/><About/><Skills/></>} />
+          <Route path="/" element={<><Navbar/><Home/></>} />
         </Routes>
       </Router>
     </div>
