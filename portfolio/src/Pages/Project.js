@@ -10,23 +10,29 @@ export default function Project() {
     "This is a website based on a ML model which was trained using health and lifestyle dataset using logistic regression and can predict thechances of sleep disorder. The training of the model was done in jupyter notebook along with data analysis and cleaning. The website is made using react, chakra and flask by importing the same model trained in jupyter notebook using pickle library.";
   return (
     <Flex direction="column" alignItems="center" id="projects">
-      <Text fontSize="4xl" color="#4abca8" mb="5">
-        Projects
+      <Text color="#4abca8" fontSize="5xl" mb="5">
+        My projects
       </Text>
       <Flex direction="column">
-        <Card
-          delay={100}
-          img={"ecom.png"}
-          title="E-commerce website"
-          desc={p1}
-        />
-        <Card delay={200} img={"goal.png"} title="Goal Manager" desc={p2} />
-        <Card
-          delay={0}
-          img={"sleep.jpg"}
-          title="Sleep disorder predictor"
-          desc={p3}
-        />
+        <a href="https://shop-ify.netlify.app/" target="_blank">
+          <Card
+            delay={100}
+            img={"ecom.png"}
+            title="E-commerce website"
+            desc={p1}
+          />
+        </a>
+        <a href="https://rozaana.netlify.app/" target="_blank">
+          <Card delay={200} img={"goal.png"} title="Goal Manager" desc={p2} />
+        </a>
+        <a href="https://sleeping-disorder.netlify.app/" target="_blank">
+          <Card
+            delay={0}
+            img={"sleep.jpg"}
+            title="Sleep disorder predictor"
+            desc={p3}
+          />
+        </a>
       </Flex>
     </Flex>
   );

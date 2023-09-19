@@ -6,10 +6,12 @@ import About from "./About";
 import Skills from "./Skills";
 import AOS from "aos";
 import Project from "./Project";
+import Location from "./Location";
+import Footer from "../Components/Footer";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 2000 });
   }, []);
 
   const name = "Hello My name is ";
@@ -35,28 +37,23 @@ export default function Home() {
 
   return (
     <>
-      <Flex
-        height="100vh"
-        justifyContent="center"
-        flexDirection="column"
-        ml="300px"
-      >
-        <div style={{ display: "flex" }}>
-          {name.split("").map((letter, index) => (
-            <Text
-              fontSize="2xl"
-              color="#4abca8"
-              key={index}
-              className={`animate__animated ${
-                index < lettersToShow ? "animate__swing" : ""
-              }`}
-            >
-              {letter === " " ? "\u00A0" : letter}
-            </Text>
-          ))}
-        </div>
-        <Flex>
-          <div>
+      <Flex height="100vh" justifyContent="center" alignItems="center">
+        <Flex direction="column" w="30%">
+          <Flex direction="row">
+            {name.split("").map((letter, index) => (
+              <Text
+                fontSize="2xl"
+                color="#4abca8"
+                key={index}
+                className={`animate__animated ${
+                  index < lettersToShow ? "animate__swing" : ""
+                }`}
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </Text>
+            ))}
+          </Flex>
+          <Flex direction="column">
             <Text fontSize="7xl" color="#cdd6f7">
               Hrishav Deka
             </Text>
@@ -64,22 +61,62 @@ export default function Home() {
               I am passionate about web development.If you searching<br></br>{" "}
               for a full stack developer you have come to the right place
             </Text>
-          </div>
-          <div>
-            <Image
-              src="photo.jpg"
-              w="350px"
-              h="350px"
-              borderRadius="50%"
-              overflow="hidden"
-              ml="10"
-              border="#4abca8 solid 1px"
-              boxShadow="0 0 10px 3px rgba(74, 188, 168, 0.6)"
-            />
-          </div>
+            <Flex
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              w="30%"
+            >
+              <a href="https://www.linkedin.com/in/hrishav-deka-67421b256/">
+                <Image
+                  src="link.png"
+                  w="60%"
+                  m="3"
+                  mt="60%"
+                  className="links"
+                />
+              </a>
+              <a href="https://github.com/hrishav77">
+                <Image
+                  src="insta.png"
+                  w="60%"
+                  m="3"
+                  mt="60%"
+                  className="links"
+                />
+              </a>
+              <a href="https://www.instagram.com/hrishav_d/">
+                <Image
+                  src="instagram.png"
+                  w="60%"
+                  m="3"
+                  mt="60%"
+                  className="links"
+                />
+              </a>
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex
+          backgroundColor="rgb(255,255,254,0.03)"
+          w="40%"
+          p="3"
+          justifyContent="center"
+        >
+          <Image
+            src="photo.jpg"
+            w="350px"
+            h="350px"
+            borderRadius="0.5%"
+            overflow="hidden"
+            // ml="40%"
+            // border="#4abca8 solid 1px"
+            boxShadow="0 0 5px 5px rgba(74, 188, 168, 0.6)"
+          />
         </Flex>
       </Flex>
-      <Flex h="80vh">
+
+      <Flex h="60vh">
         <div id="about" data-aos="fade-right">
           <About />
         </div>
@@ -87,8 +124,9 @@ export default function Home() {
       <div id="skills" data-aos="fade-left">
         <Skills />
       </div>
-
       <Project />
+      <Location />
+      {/* <Footer /> */}
     </>
   );
 }

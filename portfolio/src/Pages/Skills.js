@@ -11,7 +11,7 @@ export default function Skills() {
       justifyContent="center"
     >
       <Text color="#4abca8" fontSize="5xl">
-        Skills
+        What are my skills?
       </Text>
       <Text color="white" fontSize="lg">
         <Flex flexWrap="wrap">
