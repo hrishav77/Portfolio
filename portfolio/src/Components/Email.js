@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { useMediaQuery } from "@chakra-ui/react";
 import {
   Box,
   Flex,
@@ -13,6 +14,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 const Email = () => {
+  const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
+    "(max-width: 900px)",
+    "(display-mode: browser)",
+  ]);
   const form = useRef();
   const [stats, setstat] = useState("");
   const sendEmail = (e) => {
@@ -20,10 +25,10 @@ const Email = () => {
 
     emailjs
       .sendForm(
-        "service_j1fncr1",
-        "template_rjfyixc",
+        process.env.REACT_APP_KEY1,
+        process.env.REACT_APP_KEY2,
         form.current,
-        "g0ldATgH_59xsqyJ-"
+        process.env.REACT_APP_KEY3
       )
       .then(
         (result) => {
@@ -38,17 +43,29 @@ const Email = () => {
   };
 
   return (
-    <Flex direction="column" w="50%" alignItems="center">
-      <Text fontSize="4xl" color="#4abca8" mb="5">
-        Want to contact me?
+    <Flex
+      direction="column"
+      w={isSmallScreen ? "80%" : "50%"}
+      alignItems={isSmallScreen ? "flex-end" : "center"}
+      // justifyItems="flex-end"
+      backgroundColor="rgb(0,0,0,0.6)"
+      // borderRadius="3%"
+      p="9%"
+    >
+      <Text fontSize={isSmallScreen ? "sm" : "4xl"} color="white" mb="5">
+        Send Me A Message
       </Text>
-      <Flex direction="column" color="white" w="300px">
+      <Flex
+        direction="column"
+        color="white"
+        w={isSmallScreen ? "150px" : "300px"}
+      >
         <form ref={form} onSubmit={sendEmail}>
-          <FormControl id="name" isRequired mb={4}>
+          <FormControl id="name" isRequired mb={isSmallScreen ? "" : "4"}>
             <FormLabel>Name</FormLabel>
             <Input type="text" name="user_name" />
           </FormControl>
-          <FormControl id="email" isRequired mb={4}>
+          <FormControl id="email" isRequired mb={isSmallScreen ? "" : 4}>
             <FormLabel>Email</FormLabel>
             <Input type="email" name="user_email" />
           </FormControl>
@@ -56,17 +73,17 @@ const Email = () => {
             <FormLabel>Message</FormLabel>
             <Textarea name="message" />
           </FormControl>
-          <Button
-            type="submit"
-            color="blackAlpha.800"
-            className="bubbly-button"
-            on
-          >
-            Submit
+          <Button type="submit" backgroundColor="#ff4902" on color="white">
+            Send
           </Button>
         </form>
       </Flex>
-      <Text color="white" alignContent="center" p="3" size="xl">
+      <Text
+        color="white"
+        alignContent="center"
+        p="3"
+        size={isSmallScreen ? "sm" : "xl"}
+      >
         {stats}
       </Text>
     </Flex>

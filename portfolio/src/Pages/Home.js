@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../index.css";
 import "animate.css";
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import About from "./About";
 import Skills from "./Skills";
 import AOS from "aos";
@@ -10,6 +10,10 @@ import Location from "./Location";
 import Footer from "../Components/Footer";
 
 export default function Home() {
+  const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
+    "(max-width: 900px)",
+    "(display-mode: browser)",
+  ]);
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -37,12 +41,16 @@ export default function Home() {
 
   return (
     <>
-      <Flex height="100vh" justifyContent="center" alignItems="center">
+      <Flex
+        height={isSmallScreen ? "70vh" : "100vh"}
+        justifyContent="center"
+        alignItems="center"
+      >
         <Flex direction="column" w="30%">
           <Flex direction="row">
             {name.split("").map((letter, index) => (
               <Text
-                fontSize="2xl"
+                fontSize={isSmallScreen ? "md" : "2xl"}
                 color="#4abca8"
                 key={index}
                 className={`animate__animated ${
@@ -54,7 +62,7 @@ export default function Home() {
             ))}
           </Flex>
           <Flex direction="column">
-            <Text fontSize="7xl" color="#cdd6f7">
+            <Text fontSize={isSmallScreen ? "lg" : "7xl"} color="#cdd6f7">
               Hrishav Deka
             </Text>
             <Text color="#5c6883">
@@ -98,15 +106,15 @@ export default function Home() {
           </Flex>
         </Flex>
         <Flex
-          backgroundColor="rgb(255,255,254,0.03)"
+          backgroundColor="rgb(255,255,254,0.08)"
           w="40%"
           p="3"
           justifyContent="center"
         >
           <Image
             src="photo.jpg"
-            w="350px"
-            h="350px"
+            w={isSmallScreen ? "150px" : "350px"}
+            h={isSmallScreen ? "150px" : "350px"}
             borderRadius="0.5%"
             overflow="hidden"
             // ml="40%"
@@ -115,7 +123,6 @@ export default function Home() {
           />
         </Flex>
       </Flex>
-
       <Flex h="60vh">
         <div id="about" data-aos="fade-right">
           <About />

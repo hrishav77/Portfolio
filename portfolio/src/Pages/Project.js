@@ -1,7 +1,11 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import Card from "../Components/ProjectCard";
 export default function Project() {
+  const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
+    "(max-width: 900px)",
+    "(display-mode: browser)",
+  ]);
   const p1 =
     "It is an e-commerce website, designed to showcase the functionality of an online shopping experience. It includes a home page, individual product page, cart feature and a demo payment form along with authorization using jwt token authentication . Its made using react, mongoose, express, chakra ui and node.js";
   const p2 =
@@ -10,7 +14,7 @@ export default function Project() {
     "This is a website based on a ML model which was trained using health and lifestyle dataset using logistic regression and can predict thechances of sleep disorder. The training of the model was done in jupyter notebook along with data analysis and cleaning. The website is made using react, chakra and flask by importing the same model trained in jupyter notebook using pickle library.";
   return (
     <Flex direction="column" alignItems="center" id="projects">
-      <Text color="#4abca8" fontSize="5xl" mb="5">
+      <Text color="#4abca8" fontSize={isSmallScreen ? "2xl" : "5xl"} mb="5">
         My projects
       </Text>
       <Flex direction="column">
