@@ -18,7 +18,7 @@ export default function ProjectCard(props) {
   return (
     <div
       data-aos={isSmallScreen ? "" : "zoom-in"}
-      data-aos-duration="700"
+      data-aos-duration={isSmallScreen ? "" : "700"}
       data-aos-delay={props.delay}
     >
       <Flex

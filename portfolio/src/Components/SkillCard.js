@@ -12,7 +12,7 @@ export default function SkillCard(props) {
   return (
     <div
       data-aos={isSmallScreen ? "" : "zoom-in"}
-      data-aos-duration="700"
+      data-aos-duration={isSmallScreen ? "" : "700"}
       data-aos-delay={props.delay}
       className="skill-card" // Apply a custom class for additional styling
     >
