@@ -25,6 +25,9 @@ export default function ProjectCard(props) {
         className="projecthover"
         p="5"
         borderRadius="lg"
+        background={isSmallScreen ? "rgba(255, 255, 255, 0.1)" : ""}
+        border={isSmallScreen ? "solid rgba(255, 255, 255, 0.6) 1px" : ""}
+        box-shadow={isSmallScreen ? "0 0 20px 4px rgb(255,255,255,0.1)" : ""}
         direction={isSmallScreen ? "column" : ""}
       >
         <Box>

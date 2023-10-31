@@ -66,8 +66,9 @@ export default function Home() {
               Hrishav Deka
             </Text>
             <Text color="#5c6883">
-              I am passionate about web development.If you searching<br></br>{" "}
-              for a full stack developer you have come to the right place
+              I am passionate about web development.If you are searching
+              <br></br> for a full stack developer you have come to the right
+              place
             </Text>
             <Flex
               direction="row"

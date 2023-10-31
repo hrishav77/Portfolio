@@ -9,7 +9,7 @@ export default function Skills() {
   ]);
   return (
     <Flex
-      h={isSmallScreen ? "80vh" : "100vh"}
+      h={isSmallScreen ? "100vh" : "100vh"}
       alignItems="center"
       direction="column"
       justifyContent="center"
@@ -17,7 +17,7 @@ export default function Skills() {
       <Text color="#4abca8" fontSize={isSmallScreen ? "lg" : "5xl"}>
         What are my skills?
       </Text>
-      <Text color="white" fontSize="lg">
+      <Text color="white" fontSize={isSmallScreen ? "sm" : "lg"}>
         <Flex flexWrap="wrap">
           <SkillCard
             img="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png"
