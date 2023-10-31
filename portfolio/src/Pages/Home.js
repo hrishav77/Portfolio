@@ -125,11 +125,11 @@ export default function Home() {
         </Flex>
       </Flex>
       <Flex h="60vh">
-        <div id="about" data-aos="fade-right">
+        <div id="about" data-aos={isSmallScreen ? "" : "fade-right"}>
           <About />
         </div>
       </Flex>
-      <div id="skills" data-aos="fade-left">
+      <div id="skills" data-aos={isSmallScreen ? "" : "fade-left"}>
         <Skills />
       </div>
       <Project />
