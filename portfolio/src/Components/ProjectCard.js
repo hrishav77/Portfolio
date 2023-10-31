@@ -30,6 +30,7 @@ export default function ProjectCard(props) {
         border={isSmallScreen ? "solid rgba(255, 255, 255, 0.6) 1px" : ""}
         box-shadow={isSmallScreen ? "0 0 20px 4px rgb(255,255,255,0.1)" : ""}
         direction={isSmallScreen ? "column" : ""}
+        alignItems={isSmallScreen ? "center" : ""}
       >
         <Box>
           <Image
@@ -40,7 +41,7 @@ export default function ProjectCard(props) {
             borderRadius="xl"
           />
         </Box>
-        <Box m="3">
+        <Box m="3" alignItems={isSmallScreen ? "center" : ""}>
           <Heading size={isSmallScreen ? "xs" : "md"} color="#4abca8">
             {props.title}
           </Heading>

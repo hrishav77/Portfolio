@@ -9,7 +9,7 @@ export default function Skills() {
   ]);
   return (
     <Flex
-      h={isSmallScreen ? "100vh" : "100vh"}
+      h={isSmallScreen ? "40vh" : "100vh"}
       alignItems="center"
       direction="column"
       justifyContent="center"

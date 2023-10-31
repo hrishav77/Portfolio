@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Flex
-        height={isSmallScreen ? "70vh" : "100vh"}
+        height={isSmallScreen ? "50vh" : "100vh"}
         justifyContent="center"
         alignItems="center"
       >
@@ -62,7 +62,7 @@ export default function Home() {
             ))}
           </Flex>
           <Flex direction="column">
-            <Text fontSize={isSmallScreen ? "lg" : "7xl"} color="#cdd6f7">
+            <Text fontSize={isSmallScreen ? "md" : "7xl"} color="#cdd6f7">
               Hrishav Deka
             </Text>
             <Text color="#5c6883">
@@ -74,7 +74,7 @@ export default function Home() {
               direction="row"
               justifyContent="center"
               alignItems="center"
-              w="30%"
+              w={isSmallScreen ? "40%" : "30%"}
             >
               <a href="https://www.linkedin.com/in/hrishav-deka-67421b256/">
                 <Image
