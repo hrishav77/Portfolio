@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../index.css";
 import "animate.css";
-import { Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
+import { Center, Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import About from "./About";
 import Skills from "./Skills";
 import AOS from "aos";
@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Flex
-        height={isSmallScreen ? "50vh" : "100vh"}
+        height={isSmallScreen ? "70vh" : "100vh"}
         justifyContent="center"
         alignItems="center"
       >
@@ -124,7 +124,7 @@ export default function Home() {
           />
         </Flex>
       </Flex>
-      <Flex h={isSmallScreen ? "50vh" : "60vh"}>
+      <Flex h={isSmallScreen ? "70vh" : "60vh"}>
         {isSmallScreen ? (
           <div id="about">
             <About />
@@ -135,6 +135,11 @@ export default function Home() {
           </div>
         )}
       </Flex>
+      {/* <Flex
+        h={isSmallScreen ? "60vh" : ""}
+        alignItems="center"
+        justifyItems="center"
+      > */}
       {isSmallScreen ? (
         <div id="skills">
           <Skills />
@@ -144,7 +149,7 @@ export default function Home() {
           <Skills />
         </div>
       )}
-
+      {/* </Flex> */}
       <Project />
       <Location />
       {/* <Footer /> */}

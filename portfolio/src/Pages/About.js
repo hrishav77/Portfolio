@@ -33,6 +33,7 @@ export default function About() {
             fontSize={isSmallScreen ? "xs" : "xl"}
             p={isSmallScreen ? "" : "3"}
             borderRadius="5"
+            m="2"
           >
             Hello! I'm a student at Bits Pilani Goa Campus, pursuing Electronics
             and Communication. Currently in my 3rd year, I am also aquainted

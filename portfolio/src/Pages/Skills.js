@@ -9,10 +9,10 @@ export default function Skills() {
   ]);
   return (
     <Flex
-      h={isSmallScreen ? "40vh" : "100vh"}
+      h={isSmallScreen ? "60vh" : "100vh"}
       alignItems="center"
       direction="column"
-      justifyContent="center"
+      justifyItems="center"
     >
       <Text color="#4abca8" fontSize={isSmallScreen ? "lg" : "5xl"}>
         What are my skills?
