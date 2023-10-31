@@ -1,5 +1,6 @@
 import { Flex, Text, Box, Image, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
+
 import "aos/dist/aos.css";
 import Lottie from "lottie-react";
 import data from "../assets/robo.json";

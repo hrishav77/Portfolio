@@ -2,6 +2,8 @@ import React from "react";
 import { Image, Text, Box, useMediaQuery } from "@chakra-ui/react";
 import "../index.css";
 import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function SkillCard(props) {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
     "(max-width: 900px)",

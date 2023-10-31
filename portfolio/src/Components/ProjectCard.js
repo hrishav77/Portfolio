@@ -8,6 +8,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function ProjectCard(props) {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
