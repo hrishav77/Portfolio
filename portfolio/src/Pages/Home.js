@@ -124,7 +124,7 @@ export default function Home() {
           />
         </Flex>
       </Flex>
-      <Flex h="60vh">
+      <Flex h={isSmallScreen ? "50vh" : "60vh"}>
         {isSmallScreen ? (
           <div id="about">
             <About />
