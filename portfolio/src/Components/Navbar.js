@@ -3,7 +3,7 @@ import React from "react";
 import { Flex, Box, Spacer, Image, useMediaQuery } from "@chakra-ui/react";
 export default function Navbar() {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
-    "(max-width: 900px)",
+    "(max-width: 1000px)",
     "(display-mode: browser)",
   ]);
   return (

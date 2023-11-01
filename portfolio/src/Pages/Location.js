@@ -9,11 +9,11 @@ export default function Location() {
   ]);
   return (
     <Flex
-      h="100vh"
+      h={isSmallScreen ? "40em" : "100vh"}
       alignItems="center"
       direction="row"
       justifyContent="flex-end"
-      m="3"
+      m="5"
       mr={isSmallScreen ? "5%" : "15%"}
       position="relative"
     >

@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 export default function SkillCard(props) {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
-    "(max-width: 900px)",
+    "(max-width: 1000px)",
     "(display-mode: browser)",
   ]);
   return (

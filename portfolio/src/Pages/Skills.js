@@ -4,12 +4,12 @@ import "aos/dist/aos.css";
 import SkillCard from "../Components/SkillCard";
 export default function Skills() {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
-    "(max-width: 900px)",
+    "(max-width: 1000px)",
     "(display-mode: browser)",
   ]);
   return (
     <Flex
-      h={isSmallScreen ? "60vh" : "100vh"}
+      h={isSmallScreen ? "40vh" : "80vh"}
       alignItems="center"
       direction="column"
       justifyItems="center"

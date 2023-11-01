@@ -12,7 +12,7 @@ import AOS from "aos";
 
 export default function ProjectCard(props) {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
-    "(max-width: 900px)",
+    "(max-width: 1000px)",
     "(display-mode: browser)",
   ]);
   return (

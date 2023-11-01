@@ -11,7 +11,8 @@ import Footer from "../Components/Footer";
 
 export default function Home() {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
-    "(max-width: 900px)",
+    "(max-width: 1000px)",
+
     "(display-mode: browser)",
   ]);
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function Home() {
   return (
     <>
       <Flex
-        height={isSmallScreen ? "70vh" : "100vh"}
+        height={isSmallScreen ? "50vh" : "100vh"}
         justifyContent="center"
         alignItems="center"
       >

@@ -1,4 +1,11 @@
-import { Flex, Text, Box, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Box,
+  Image,
+  useMediaQuery,
+  Center,
+} from "@chakra-ui/react";
 import React from "react";
 
 import "aos/dist/aos.css";
@@ -6,7 +13,7 @@ import Lottie from "lottie-react";
 import data from "../assets/robo.json";
 export default function About() {
   const [isSmallScreen, isDisplayingInBrowser] = useMediaQuery([
-    "(max-width: 900px)",
+    "(max-width: 1000px)",
     "(display-mode: browser)",
   ]);
   return (
@@ -23,9 +30,11 @@ export default function About() {
             So, who am I?
           </Text>
           {isSmallScreen && (
-            <Box w={isSmallScreen ? "150px" : "400px"} alignItems="center">
-              <Lottie animationData={data} />
-            </Box>
+            <Center>
+              <Box w={isSmallScreen ? "150px" : "400px"} alignItems="center">
+                <Lottie animationData={data} />
+              </Box>
+            </Center>
           )}
           <Text
             color="white"
