@@ -1,8 +1,5 @@
 # Hrishav's Portfolio
 
-## Screenshots
-
-
 ## Overview
 
 Welcome to my portfolio!
@@ -37,5 +34,7 @@ cd portfolio
 npm install
 npm start
 ```
+## Screenshots
+![starting page](portfolio/public/ss1.jpg)
 
 
