@@ -114,7 +114,7 @@ export default function Home() {
           justifyContent="center"
         >
           <Image
-            src="photo.jpg"
+            src="myphoto.jpg"
             w={isSmallScreen ? "150px" : "350px"}
             h={isSmallScreen ? "150px" : "350px"}
             borderRadius="0.5%"
